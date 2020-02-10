@@ -1,0 +1,145 @@
+html,body{
+    font-family: 'Roboto', sans-serif;
+}
+/*NAV BAR*/
+
+#homeBtn{
+    color:red;
+}
+#homeBtn:hover{
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{ 
+    color: white;
+    background-color:rgb(233, 79, 79); 
+    font-weight: bold;
+}
+
+/* RECHERCHE */
+.searchbar{
+    opacity: 50%;
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 30px;
+    color: white;
+    border-radius: 30px;
+    
+}
+.search_input::placeholder{ 
+    color: white;
+    opacity: 10; 
+}
+
+.search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background-color: #353b48;
+    width: 0;
+    caret-color:transparent;
+    line-height: 30px;
+}
+.search_icon{
+    height: 30px;
+    width: 30px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:lightgray;
+    text-decoration:none;
+}
+
+/*JUMBOTRON ET CAROUSEL*/
+.jumbotron{
+    margin-bottom: 0px;
+}
+/*Barre sous jumbotron*/
+.connexion-bar{
+    border-style:hidden;
+    color: white;
+    height: 55;
+    background-color: rgb(233, 79, 79);
+    margin: 0px;
+    padding: 15px;
+}
+.btnConnexion{
+    border-style: hidden;
+    background-color: black;
+    color: white;
+}
+/*Corps du site presentation des films*/
+.article{
+    margin: auto;
+    padding:10px;
+}
+#boxFilm{
+    margin-left: 20px;
+    padding-left:10px;
+    border-left: solid 3px red;
+}
+
+.boutonBody{
+
+    border-style: hidden;
+    background-color: lightgray;
+    margin-left:0px;
+    
+}
+
+.boutonBody:hover{
+    
+    color: white;
+    background-color: rgb(233, 79, 79);;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*bas de page*/
+#btnSubs{
+    padding: auto;
+    margin: 10px;
+    height: 35px;
+    background-color: rgb(233, 79, 79);
+    color: white;
+    border-style: hidden;
+}
+#foot{
+    background-color: black;
+    padding: auto;
+    height: max-content;
+}
+a{
+    color: white;
+}
+
+.btnFoot{
+    margin: auto;
+    padding: auto;
+    border-style: hidden;
+    background-color: rgba(212, 212, 212, 0.226);
+    color: white;
+    display: inline-flex;
+}
