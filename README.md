@@ -1,9 +1,12 @@
 # Allez-Cine
 
 Membres:
-Sekri Yassine
-Steeve Henrard
 
+Amjahad Soufiane
+
+Léonard Samuel 
+
+Sekri Yassine
 
 Projet: 
 Reproduction d'un site sur le theme du cinema en utilisant toute les technlogie apprise.
