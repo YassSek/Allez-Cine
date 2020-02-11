@@ -1,6 +1,71 @@
 html,body{
     font-family: 'Roboto', sans-serif;
 }
+/*REZO POULOULOU*/
+.icon-bar {
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .icon-bar a {
+    width: 200px;
+    margin-left: -150px;
+    border-bottom-right-radius:30px ;
+    border-top-right-radius:30px ;
+
+    display: block;
+    text-align: center;
+
+    padding: 10px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .icon-bar a:hover {
+    
+    transform: translateX(50%)
+  }
+  .icon-bar .fab{
+      float: right;
+  }
+
+  .facebook {
+      
+    background: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .content {
+    margin-left: 75px;
+    font-size: 30px;
+  }
+
 /*NAV BAR*/
 
 #homeBtn{
@@ -59,12 +124,6 @@ html,body{
     position: absolute;
     width: 90%;
 }
-
-.carousel-inner>.item { 
-    
-}
-
-
 
 
 .jumbotron{
