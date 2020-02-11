@@ -127,7 +127,7 @@ html,body{
 
 
 .jumbotron{
-    
+
     margin-bottom: 0px;
 }
 /*Barre sous jumbotron*/
@@ -174,6 +174,23 @@ html,body{
 
 
 
+/*MODAL*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-body {
+    padding: 10px 20px;
+    background: #fff;
+  }
 
 
 
@@ -183,13 +200,14 @@ html,body{
 
 
 
-
-
-
-
-
-
-
+  @keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
 
 
