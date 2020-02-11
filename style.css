@@ -80,15 +80,17 @@ html,body{
     padding-left:10px;
     border-left: solid 3px red;
 }
-
-.boutonBody{
-
-    border-style: hidden;
-    background-color: lightgray;
-    margin-left:0px;
-    
+#selectBox{
+    display: flexbox;
 }
 
+.boutonBody{
+    display: inline-block;
+    border-style: hidden;
+    background-color: lightgray;
+    margin: -2px;
+    
+}
 .boutonBody:hover{
     
     color: white;
