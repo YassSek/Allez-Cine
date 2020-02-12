@@ -20,12 +20,6 @@ function topFunction() {
 }
  /*Scroll to top when arrow up clicked END*/
 
-
-
-
-
-
-
 const closeBtn = document.getElementsByClassName('close');
 
 // Get DOM Elements
@@ -51,7 +45,6 @@ regBtn.addEventListener('click',openRegister);
 //     btn.addEventListener('click',openLogin); // queryselectorALL selectionne tout les element mais il faut parcourir les elements d'ou la boucle FOR OF qui va reagire a chaque element BTN 
 //                                              // de l'element logBtn ( qui prends tout les selector de la class .btnConnexion) et va activer l'event listener
 // }
-
 // Events modal message
 modalBtn.addEventListener('click', openModal);
 
@@ -65,8 +58,6 @@ function openRegister(){
 function openLogin(){
     logModal.style.display='block';
 }
-
-
 
 // Open modal message
 function openModal() {
@@ -111,7 +102,3 @@ function outsideClick(e) {
     }
 
 }
-
-
-
-

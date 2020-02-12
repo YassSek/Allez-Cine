@@ -38,7 +38,10 @@ html,body{
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-  
+  .icon-bar a i{
+    margin-right: 8px;
+    margin-top: 5px;
+  }
   .icon-bar a {
     width: 200px;
     margin-left: -150px;
@@ -154,8 +157,9 @@ html,body{
 
 
 .jumbotron{
-
-    margin-bottom: 0px;
+  width: 100%;
+    padding-top: 0px;
+    margin-top: 0px;
 }
 /*Barre sous jumbotron*/
 .connexion-bar{

@@ -4,13 +4,11 @@
 
 
 // feature movies  
-let trends=[]
+let trends=[] // array qui va prendre chaque element et leur differente valeurs ( genre , poster , date ) a chaqu'un des ellement disponible
 const requestOptions = {
     method: 'GET',
     redirect: 'follow'
   };
- 
-   
  
 function fetchFilms(){//RECUPERE 2O FILMS avec leurs infos de base
    
@@ -20,7 +18,7 @@ function fetchFilms(){//RECUPERE 2O FILMS avec leurs infos de base
         Array.from(result.results).forEach( el=>{
             trends.push([el.id,el.title,el.release_date,el.poster_path,el.genre_ids])
             })
-        AddGenre(trends)
+        AddGenre(trends) // appel de la fct addGenre avec le tableau et toute les valeur introduite dedans
     })
    
  
@@ -36,7 +34,7 @@ function AddGenre(arr){//Change les id de genre directement par les noms de genr
             })
         for(el in arr){
             for(e in (arr[el][4])){
-                genre=genrebyid.find(x => x.id == arr[el][4][e])
+                genre=genrebyid.find(x => x.id == arr[el][4][e]) // sa faut m'expliquer forttttt !!!!!!!!!!!
                 arr[el][4][e]=genre.name
             }
         }
@@ -47,24 +45,24 @@ function AddGenre(arr){//Change les id de genre directement par les noms de genr
  
 function createCards(arr){
     let target = document.getElementById("target")
-    let template = document.getElementById("tpl")
+    let template = document.getElementById("tpl") // telecharge la template = de la structure html
     for (ele of arr){
-        let clone = document.importNode(template.content, true)
+        let clone = document.importNode(template.content, true) // variable clone qui recrée la template 
         // console.log(clone)
         //ID DU FILM
         let idfilm=clone.getElementById("card")
-        idfilm.setAttribute("value",ele[0])
+        idfilm.setAttribute("value",ele[0])//ajoute l'element id du film a l'element card
         //Titre du film
         let title = clone.querySelectorAll("h5")
-        title[0].textContent = ele[1]
+        title[0].textContent = ele[1] 
         //Poster du film
         let image=clone.querySelectorAll("img")
-        image[0].setAttribute("src",'https://image.tmdb.org/t/p/w500'+ele[3])
+        image[0].setAttribute("src",'https://image.tmdb.org/t/p/w500'+ele[3]) // chaque element du tableau arr dispose a son tour d'un tableau avec des position fixe ici la pos 3 est pour selectionner l'image
         //Genres
         let genre = clone.querySelectorAll("p")
-        genre[0].textContent = ele[4].join(', ')
+        genre[0].textContent = ele[4].join(', ') // ajoute l'element n 4 et le transforme en string dans le selecteur genre
         let date = clone.querySelectorAll("i")
-        date[0].textContent = ele[2]
+        date[0].textContent = ele[2] // ici ajoute l'element de la date en pos 2 pour lui indiqué la date de l'element i ( mais pq balise i ??)
         target.appendChild(clone)
     }
 }
@@ -74,7 +72,7 @@ fetchFilms()
 document.getElementById("action").addEventListener('click',()=>{
     // console.log('ACTION')
     let cards=document.getElementsByClassName('cds')
-    for(i=0;i<cards.length;i++){
+    for(i=0;i<cards.length;i++){ // parcours les cartes de chaque film afficher
         par=card[i].querySelectorAll("p")
         if(!par[0].textContent.includes('Action')){
             cards[i].style.display="none"
@@ -93,5 +91,15 @@ document.getElementById("drama").addEventListener('click',()=>{
         }else{
             cards[i].style.display="initial"
         }
+    }
+})
+
+document.getElementById("all").addEventListener('click',()=>{
+    // console.log('DRAMA')
+    let cards=document.getElementsByClassName('cds')
+    for(i=0;i<cards.length;i++){
+        par=card[i].querySelectorAll("p")
+        cards[i].style.display="initial";
+        
     }
 })
