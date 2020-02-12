@@ -12,7 +12,7 @@ html,body{
   position: fixed;
   bottom: 20px;
   right: 30px;
-  z-index: 300;
+  z-index: 1;
   border: none;
   outline: none;
   background-color: rgba(233, 51, 51, 0.562);
@@ -198,14 +198,16 @@ html,body{
     background-color: rgb(233, 79, 79);;
 }
 /*modal login*/
-.modal-login a{
-  
-  color: lightslategrey;
-  background-color: white;
+#titleMod{
+
+  text-align: center;
+  color:white;
+  font-weight: bolder;
+
 }
-.modal-header a{
- color: lightslategrey;
- background-color: white;
+.modal-header {
+
+ background-color: lightslategrey;
 }
 #login{
   margin:10px;
@@ -215,6 +217,7 @@ html,body{
   margin-left: 50px;
 }
 .logmodal{
+  z-index: 100;
   display: none;
   position: fixed;
   z-index: 1;
@@ -228,6 +231,7 @@ html,body{
 }
 
 #login-modal{
+  z-index: 100;
   display: none;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.863);
@@ -236,7 +240,7 @@ html,body{
 .regmodal{
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   left: 0;
   top: 0;
   height: 100%;
@@ -246,17 +250,26 @@ html,body{
   box-shadow: lightslategrey 3px;
 }
 #regis-modal{
+
   display: none;
+  z-index: 100;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.863);
   box-shadow: lightslategrey 3px;
+}
+.modalBtnStyle{
+  margin: 5px;
+  border: none;
+  background-color: grey;
+  color: white;
+  font-weight: bold;
 }
 
 /*MODAL message*/
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     left: 0;
     top: 0;
     height: 100%;
@@ -266,8 +279,8 @@ html,body{
     box-shadow: lightslategrey 3px;
   }
   .modal-content{
-    margin: 10% auto;
-  width: 60%;
+    margin: 20% auto;
+  width: 30%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   }
   .modal-body {
@@ -276,6 +289,7 @@ html,body{
   }
 
   .close {
+    z-index: 100;
     color: #ccc;
     float: right;
     font-size: 30px;
@@ -289,13 +303,6 @@ html,body{
     cursor: pointer;
   }
   
-
-
-
-
-
-
-
   @keyframes modalopen {
     from {
       opacity: 0;

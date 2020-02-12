@@ -3,33 +3,6 @@
 // $('.carousel').carousel()
 
 
-
-
-// FLECHE SCROLL UP
-
-let mybutton = document.getElementById("scrollBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
- /*Scroll to top when arrow up clicked END*/
-
-
-
-
 // feature movies  
 let trends=[]
 const requestOptions = {
@@ -68,7 +41,7 @@ function AddGenre(arr){//Change les id de genre directement par les noms de genr
             }
         }
         createCards(arr)
-        console.log(arr)
+        // console.log(arr)
     })
 }
  
@@ -77,7 +50,7 @@ function createCards(arr){
     let template = document.getElementById("tpl")
     for (ele of arr){
         let clone = document.importNode(template.content, true)
-        console.log(clone)
+        // console.log(clone)
         //ID DU FILM
         let idfilm=clone.getElementById("card")
         idfilm.setAttribute("value",ele[0])
@@ -99,7 +72,7 @@ function createCards(arr){
  
 fetchFilms()
 document.getElementById("action").addEventListener('click',()=>{
-    console.log('ACTION')
+    // console.log('ACTION')
     let cards=document.getElementsByClassName('cds')
     for(i=0;i<cards.length;i++){
         par=card[i].querySelectorAll("p")
@@ -111,7 +84,7 @@ document.getElementById("action").addEventListener('click',()=>{
     }
 })
 document.getElementById("drama").addEventListener('click',()=>{
-    console.log('DRAMA')
+    // console.log('DRAMA')
     let cards=document.getElementsByClassName('cds')
     for(i=0;i<cards.length;i++){
         par=card[i].querySelectorAll("p")

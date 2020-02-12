@@ -1,10 +1,40 @@
+// FLECHE SCROLL UP
+
+let mybutton = document.getElementById("scrollBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+ /*Scroll to top when arrow up clicked END*/
+
+
+
+
+
+
+
+const closeBtn = document.getElementsByClassName('close');
+
 // Get DOM Elements
 let corp = document.getElementById('message')
 let message = document.getElementsByClassName('modal')
+
 const modal = document.getElementById('my-modal');
 const modalBtn = document.getElementById('modal-btn');
-const closeBtn = document.querySelectorAll('.close');
-console.log(modal,corp,message)
+
 // login et register DOM
 const logBtn=document.getElementById('log-in')
 
@@ -24,7 +54,7 @@ regBtn.addEventListener('click',openRegister);
 
 // Events modal message
 modalBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
+
 window.addEventListener('click', outsideClick);
 
 
