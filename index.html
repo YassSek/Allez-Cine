@@ -23,19 +23,14 @@
         <a href="#" class="facebook">facebook<i class="fab fa-facebook"></i></a>
         <a href="#" class="twitter">twitter <i class="fab fa-twitter"></i></a>
         <a href="#" class="google">google <i class="fab fa-google"></i></a>
-        <a href="#" class="linkedin">linkedin <i class="fab fa-linkedin"></i></a>
-        <a href="#" class="youtube">youtube <i class="fab fa-youtube"></i></a>
+        <a href="#" class="codepen">codepen <i class="fab fa-codepen"></i></a>
+
     </div>
 
     <header>
         <!-- NAVBAR JUMBOTRON CAROUSEL-->
 
 
-        <!--debut de la div jumbotron qui englobe le tout.-->
-
-
-
-        <!--NAVBAR -->
         <div class="jumbotron text-center">
             <!--debut de la div jumbotron qui englobe le tout.-->
 
@@ -127,52 +122,117 @@
 
 
         <!-- BAR DE CONNEX -->
-
-
         <div class="connexion-bar "> <i class="fas fa-phone"></i> 000 800 454748
             <button class="btnConnexion" id="log-in">Connexion</button>
             <button class="btnConnexion" id="inscription">Inscription</button>
         </div>
+        <!-- MODAL CONNEXION ET REGISTRATION -->
+        <div class="logmodal" id="login-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div></div>
+                    <a id="login" href="login">Login</a>
+                    <a id="register" href="register">Register</a>
+                    <div></div>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-login">
 
+                    <form>
+                        <div>
+                            <input type="text" placeholder="Login">
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Mot de passe">
+                        </div>
+
+                    </form>
+                    <button>Ok</button>
+                    <button>Connexion</button>
+                    <button>Inscription</button>
+                    <a href="#">Login ou Mdp oublié ?</a>
+                    <a href="#">cancel</a>
+                </div>
+            </div>
+        </div>
+        <!--Modal: Login / Register Form-->
+        <div class="regmodal" id="regis-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div></div>
+                    <a id="login" href="login">Login</a>
+                    <a id="register" href="register">Register</a>
+                    <div></div>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-regis">
+
+                    <form>
+                        <div>
+                            <input type="text" placeholder="Login">
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Mot de passe">
+                        </div>
+                        <div>
+                            <input type="confirm-password" placeholder="Confirmez mot de passe">
+                        </div>
+
+                    </form>
+                    <button>Condition general</button>
+                    <button>Inscription</button>
+
+                    <a href="#">cancel</a>
+                </div>
+            </div>
+        </div>
     </header>
-
-
-
-
-    <!--form-->
-
-
-    </div>
-    <section class="container">
+    <!-- FEATURE FILMS -->
+    <section>
         <article class="article">
             <div class="row">
                 <div class="col-md-12">
                     <h2 id="boxFilm">Films au box office</h2>
                 </div>
-                <div class=""></div>
-                <div class="col-md-12" id="selectBox">
-                    <div class="col-md-3">
-                        <button class="boutonBody ">All</button>
-                        <button class="boutonBody">Action</button>
-                        <button class="boutonBody">Policier</button>
-                    </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-11" id="selectBox">
+                    <button class="boutonBody">All</button>
+                    <button id='action' class="boutonBody">Action</button>
+                    <button id='drama' class="boutonBody">Drama</button>
                 </div>
-
+                <div class="col-md-1"></div>
                 <div class=" col-md-2">
-                    <table class="table">
-                        <th>
-                            <tr>ici img titre ect</tr>
-                        </th>
-                    </table>
+                   
                 </div>
 
             </div>
+            <!--CARDS FILMS-->
         </article>
+        <template id="tpl">
+            <div class="col mb-4 cds">
+                <div id="card" class="card h-100">
+                    <img class="card-img-top" alt="...">
+                    <div class="card-body" style='position:relative'>
+                        <h5 class="card-title"></h5>
+                        <hr>
+                        <p class="card-text"></p>
+                        <i style='position: absolute;bottom: 0;'></i>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <div class="container">
+            <div id="target" class="row row-cols-3 row-cols-md-5">
+                
+            </div>
+        </div>
+
+
     </section>
 
 
 
-
+    <!--formulaire message-->
     <form>
         <div class="col-xl-8 col-md-12 my-3 mx-auto border rounded shadow-lg bg-light text-white">
             <div class="form-row my-3">
@@ -200,27 +260,27 @@
                     </div>
                 </div>
             </div>
-            <!-- bouton et debut du modal -->
+            <!-- bouton et debut du modal message-->
             <button type="button" id="modal-btn" class=" btn btn-danger my-3">Sign in</button>
         </div>
 
-            <div id="my-modal" class="modal">
-                <div class="modal-content">
+        <div id="my-modal" class="modal">
+            <div class="modal-content">
                 <div class="modal-header">
                     <h2>Merci</h2>
                     <span class="close">&times;</span>
                 </div>
-                <div class="modal-body">
+                <div id="message">
                     <p>This is my modal</p>
                 </div>
-                </div>
             </div>
+        </div>
 
     </form>
-    
-        
-  
-    
+
+
+
+
     <!--submited-->
 
     <a href="#" class="btn text-white my-3 btn-lg active" type="submit"><i class="fa fa-envelope"></i>
@@ -234,7 +294,7 @@
 
 
     <footer id="foot" class="page-footer font-small text-white ">
-        <!-- INSCRIPTION-->
+        <!-- subs newsletter -->
 
         <form class="form-inline row">
             <div class="col-md-4 col-1"></div>
@@ -378,29 +438,29 @@
             <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
         </div>
         <!-- Copyright -->
+        <!-- BOUTON SCROLL UP -->
+        <button onclick="topFunction()" id="scrollBtn" title="Go to top"><i class="fas fa-arrow-up"></i> </button>
         <!-- SCRIPT -->
-        <<<<<<< HEAD <!-- <script src="script.js">
-            </script> -->
+       
+         <script src="script.js"></script>
+         
+         <script src="form.js"></script>
 
-            =======
 
-
-            >>>>>>> 21ec92da9403b9dcd83bae881e331f7e29910c48
-            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-                crossorigin="anonymous">
-            </script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-                crossorigin="anonymous">
-            </script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-                crossorigin="anonymous">
-            </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
 
     </footer>
-    <script src="form.js"></script>
+    
+   
+    
 </body>
 
 
