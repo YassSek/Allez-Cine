@@ -292,66 +292,72 @@
                 </div>
             </div>
         </div>
-
-
     </section>
-
+    <hr>
     <!--formulaire message-->
-    <form>
-        <div class="col-xl-8 col-md-12 my-3 mx-auto border rounded shadow-lg bg-light text-white">
-            <div class="form-row my-3">
-                <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="inputLastname" placeholder="Nom">
-                </div>
-                <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="inputFirstname" placeholder="Prénom">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-                </div>
-                <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="inputSubject" placeholder="Sujet">
-                </div>
-            </div>
-
+    <section>
+        <article>
             <div class="row">
-                <div class="col-12">
-                    <div class="form-group">
-                        <textarea class="form-control" id="textarea" placeholder="Votre message..." rows="5"></textarea>
+                <div class="col-md-12">
+                    <h2 id="boxFilm">Contactez nous</h2>
+                </div>
+            </div>
+        </article>
+
+        <form>
+            <div class="col-xl-8 col-md-12 my-3 mx-auto border rounded shadow-lg bg-light text-white">
+                <div class="form-row my-3">
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="inputLastname" placeholder="Nom">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="inputFirstname" placeholder="Prénom">
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="inputSubject" placeholder="Sujet">
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <textarea class="form-control" id="textarea" placeholder="Votre message..." rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- bouton et debut du modal message-->
+                <button type="button" id="modal-btn" class=" btn btn-danger my-3">Sign in</button>
+            </div>
+    
+            <div id="my-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Merci</h2>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div id="message">
+                        <p>This is my modal</p>
                     </div>
                 </div>
             </div>
-            <!-- bouton et debut du modal message-->
-            <button type="button" id="modal-btn" class=" btn btn-danger my-3">Sign in</button>
-        </div>
+    
+        </form>
+    
 
-        <div id="my-modal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>Merci</h2>
-                    <span class="close">&times;</span>
-                </div>
-                <div id="message">
-                    <p>This is my modal</p>
-                </div>
-            </div>
-        </div>
-
-    </form>
-
+    </section>
+    
 
 
 
     <!--submited-->
 
-    <a href="#" class="btn text-white my-3 btn-lg active" type="submit"><i class="fa fa-envelope"></i>
-        Envoyer</a>
-    </div>
-    </div>
-    </form>
+    
 
 
     <!-- Footer -->
@@ -364,7 +370,9 @@
             <div class="col-md-4 col-1"></div>
             <input class="form-control col-md-3 col-7" type="email" placeholder="Entrez votre e-mail"
                 aria-label="e-mail">
-            <button class="col-md-2 col-3" id="btnSubs">Subscribe</button>
+            <button class="col-md-2 col-3" id="btnSubs">
+                <a href="./newsletters.html">Subscribe</a>
+            </button>
         </form>
 
 
