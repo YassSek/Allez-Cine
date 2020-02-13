@@ -20,7 +20,7 @@
 <body>
 
     <div class="icon-bar">
-        <a href="#" class="facebook">facebook<i class="fab fa-facebook"></i></a>
+        <a href="#" class="facebook">facebook <i class="fab fa-facebook"></i></a>
         <a href="#" class="twitter">twitter <i class="fab fa-twitter"></i></a>
         <a href="#" class="google">google <i class="fab fa-google"></i></a>
         <a href="#" class="codepen">codepen <i class="fab fa-codepen"></i></a>
@@ -194,38 +194,67 @@
         <article class="article">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 id="boxFilm">Films au box office</h2>
+                <h2 id="boxFilm">Films au box office</h2>
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-11" id="selectBox">
-                    <button id="all" class="boutonBody">All</button>
+                    <button id='all' class="boutonBody">All</button>
                     <button id='action' class="boutonBody">Action</button>
                     <button id='drama' class="boutonBody">Drama</button>
+                   
                 </div>
+                <div class="col-md-1"></div>
+                <div class=" col-md-2"></div>
+               
+   
             </div>
+           <!--CARDS FILMS-->
         </article>
-        <!--CARDS FILMS-->
         <template id="tpl">
             <div class="col mb-4 cds">
                 <div id="card" class="card h-100">
-                    <img class="card-img-top" alt="...">
-                    <div class="card-body" style='position:relative'>
-                        <h5 class="card-title"></h5>
-                        <hr>
-                        <p class="card-text"></p>
-                        <i style='position: absolute;bottom: 0;'></i>
-                    </div>
+                  <img  class="card-img-top" alt="...">
+                  <div class="card-body" style='position:relative'>
+                    <h5 class="card-title"></h5>
+                    <hr>
+                    <p class="card-text"></p>
+                    <i style='position: absolute;bottom: 0;'></i>
+                  </div>
                 </div>
-            </div>
+              </div>
         </template>
         <div class="container">
-            <div id="target" class="row row-cols-3 row-cols-md-5">
+            <div id="target" class="row row-cols-3 row-cols-lg-6">
+               
             </div>
         </div>
-
+        <button id='showmore' class="boutonBody">Show More</button>
+        <button id='showless' class="boutonBody" style='display: none;'>Show Less</button>
+ 
+        <div id="modalvid" class="modalvideo">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2></h2>
+                    <span id="closevideo">×</span>
+                </div>
+                <div id="video">
+                    <iframe id='iframeboy' width="560" height="315" src="https://www.youtube.com/embed/zyYgDtY2AMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- FIN DES FILMS A AFFICHER  -->
 
+    <!-- shop movie -->
+    <section>
+
+
+
+
+
+
+    </section>
 
     <!--formulaire message-->
     <form>
