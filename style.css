@@ -400,3 +400,9 @@ a{
     color: white;
     display: inline-flex;
 }
+
+#footPres img{
+  width: 30%;
+  height: 30%;
+  margin: 0px;
+}
