@@ -179,7 +179,20 @@ setTimeout(function(){ Array.from(document.querySelectorAll('.card')).forEach(fu
     });
      });; }, 1000)
 
+async function fetchTrailerShop(id){
+    let res= await fetch("http://api.themoviedb.org/3/movie/"+id+"/videos?api_key=5c717347fca7ad27bbc4791dbc618e51", requestOptions)
+    .then(response => response.json())
+    .then(result => result)
+    .catch(error => console.log('error', error));
+    document.getElementById('shopframe').setAttribute('src',"https://www.youtube.com/embed/"+res.results[0].key)
 
+}
+
+
+Array.from(document.querySelectorAll('.shoplist')).forEach(function(item) {item.addEventListener('click', function() {
+        console.log('click')
+      fetchTrailerShop(item.getAttribute('value'))
+    })})
 
 function closeModal() {
     document.getElementById('modalvid').style.display = 'none';
