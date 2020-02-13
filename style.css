@@ -224,11 +224,23 @@ html,body{
   text-align: center;
   color:white;
   font-weight: bolder;
-
 }
 .modal-header {
-
+  text-align: center;
  background-color: lightslategrey;
+}
+.modal-content{
+  width: 250px;
+   
+}
+.inputs{
+ margin: 5px;
+  text-align: center;
+}
+
+.modal{
+  width: 300px;
+ 
 }
 #login{
   margin:10px;
@@ -279,11 +291,15 @@ html,body{
   box-shadow: lightslategrey 3px;
 }
 .modalBtnStyle{
+  text-align: center;
   margin: 5px;
   border: none;
   background-color: grey;
   color: white;
   font-weight: bold;
+  
+  margin: 5px;
+  margin-top: 10px;
 }
 
 /*MODAL message*/
@@ -301,7 +317,7 @@ html,body{
   }
   .modal-content{
     margin: 20% auto;
-  width: 30%;
+  width: 250px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   }
 
@@ -330,8 +346,10 @@ html,body{
   }
 /* style modale video*/
 #video iframe{
-  margin: 15px;
+  margin: 15%;
 }
+
+
 .modalvideo {
   display: none;
   position: fixed;
@@ -344,12 +362,15 @@ html,body{
   background-color: rgba(0, 0, 0, 0.747);
   box-shadow: lightslategrey 3px;
   }
-  .modal-content{
+  .modal-video-content{
   margin: 20% auto;
-  width: 50%;
+  width: fit-content;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   }
-  
+  .modal-header-video{
+    background-color: rgba(128, 128, 128, 0.788);
+    width: fit-content;
+  }
   .closevideo {
   z-index: 100;
   color: #ccc;

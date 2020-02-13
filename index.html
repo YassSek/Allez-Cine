@@ -29,10 +29,11 @@
     </div>
 
     <header>
-       <!-- POPUP COOKIE -->
+        <!-- POPUP COOKIE -->
         <div class="alert text-center cookiealert" role="alert">
-            <b>Aimez vous vos cookies ?</b> &#x1F36A; Nous utilisons vos donnée personelle pour vous garantir une experience unique. coeur sur vous ;) <a href="https://cookiesandyou.com/" target="_blank">En savoir +</a>
-        
+            <b>Aimez vous vos cookies ?</b> &#x1F36A; Nous utilisons vos donnée personelle pour vous garantir une
+            experience unique. coeur sur vous ;) <a href="https://cookiesandyou.com/" target="_blank">En savoir +</a>
+
             <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">
                 J'accepte
             </button>
@@ -145,7 +146,7 @@
                 </div>
                 <div class="modal-login">
 
-                    <form>
+                    <form class="inputs">
                         <div>
                             <input type="text" placeholder="Login">
                         </div>
@@ -153,11 +154,15 @@
                             <input type="password" placeholder="Mot de passe">
                         </div>
 
+
                     </form>
-                    <button class="modalBtnStyle">rester connecter</button>
-                    <button class="modalBtnStyle">Ok</button>
-                    <button class="modalBtnStyle">Connexion</button>
-                    <button class="modalBtnStyle">Inscription</button>
+                    
+                        <button class="modalBtnStyle">rester connecter</button>
+                        <button class="modalBtnStyle">Ok</button>
+                        <button class="modalBtnStyle">Connexion</button>
+                        <button class="modalBtnStyle">Inscription</button>
+                    
+
                     <a href="#">Login ou Mdp oublié ?</a>
                     <a href="#">cancel</a>
                 </div>
@@ -175,19 +180,20 @@
                 <div class="modal-regis">
 
                     <form>
-                        <div>
-                            <input type="text" placeholder="Login">
+                        <div class="inputs">
+                            <div>
+                                <input type="text" placeholder="Login">
+                            </div>
+                            <div>
+                                <input type="email" placeholder="E-mail">
+                            </div>
+                            <div>
+                                <input type="password" placeholder="Mot de passe">
+                            </div>
+                            <div>
+                                <input type="confirm-password" placeholder="Confirmez mot de passe">
+                            </div>
                         </div>
-                        <div>
-                            <input type="email" placeholder="E-mail">
-                        </div>
-                        <div>
-                            <input type="password" placeholder="Mot de passe">
-                        </div>
-                        <div>
-                            <input type="confirm-password" placeholder="Confirmez mot de passe">
-                        </div>
-
                     </form>
                     <button class="modalBtnStyle">Condition general</button>
                     <button class="modalBtnStyle">Inscription</button>
@@ -212,8 +218,6 @@
                     <button id='drama' class="boutonBody">Drama</button>
 
                 </div>
-                <div class="col-md-1"></div>
-                <div class=" col-md-2"></div>
 
 
             </div>
@@ -249,13 +253,13 @@
         </div>
 
         <div id="modalvid" class="modalvideo">
-            <div class="modal-content">
-                <div class="modal-header">
+            <div class="modal-video-content">
+                <div class="modal-header-video">
 
                     <span id="closevideo">×</span>
                 </div>
-                <div id="video">
-                    <iframe id='iframeboy' width="560" height="315" src="https://www.youtube.com/embed/zyYgDtY2AMY"
+                <div id="video" >
+                    <iframe id='iframeboy' height="315"width="560" margin="15%" src="https://www.youtube.com/embed/zyYgDtY2AMY"
                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
@@ -279,7 +283,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-md-6 col-lg-6">
                     <div class="row">
                         <div class="shoplist  col-4" value="359724">
                             <img src="https://image.tmdb.org/t/p/original/n3UanIvmnBlH531pykuzNs4LbH6.jpg">
@@ -308,7 +312,7 @@
 
                 </div>
                 <div class="col-12 col-lg-6">
-                    <iframe id="shopframe" src="" frameborder="0"></iframe>
+                    <iframe  id="shopframe" src="" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -487,7 +491,7 @@
                         <img src="https://image.tmdb.org/t/p/original/7GsM4mtM0worCtIVeiQt28HieeN.jpg">
                         <img src="https://image.tmdb.org/t/p/original/vqzNJRH4YyquRiWxCCOH0aXggHI.jpg">
                         <img src="https://image.tmdb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg">
-                        <img src="https://image.tmdb.org/t/p/original/pjeMs3yqRmFL3giJy4PMXWZTTPa.jpg"> 
+                        <img src="https://image.tmdb.org/t/p/original/pjeMs3yqRmFL3giJy4PMXWZTTPa.jpg">
                     </div>
                 </div>
                 <!-- Grid column -->
@@ -525,7 +529,8 @@
 
         <script src="form.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script> <!-- script cookies -->
+        <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
+        <!-- script cookies -->
 
 
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
