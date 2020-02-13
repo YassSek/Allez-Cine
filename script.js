@@ -1,10 +1,7 @@
-// MESSAGE COOKIES
-window.confirm("Nous utilisons des données non sensibles comme des cookies ou des identifiants électroniques pour afficher un contenu personnalisées, mesurer le nombre de visiteurs,ect. Cliquez sur le bouton pour donner votre consentement à ces opérations et profiter d'une expérience personnalisée.");
-
 
 let trends=[]
 let shows=6
-const requestOptions = {
+const requestOptions = { // pour ne pas reecrire a chaque fetch la même methode
     method: 'GET',
     redirect: 'follow'
   };
@@ -16,12 +13,13 @@ function fetchFilms(){//RECUPERE 2O FILMS avec leurs infos de base
     const fims= fetch("https://api.themoviedb.org/3/trending/movie/week?api_key=5c717347fca7ad27bbc4791dbc618e51", requestOptions)
     .then(response => response.json())
     .then(result => {
-        Array.from(result.results).forEach( el=>{
-            trends.push([el.id,el.title,el.release_date,el.poster_path,el.genre_ids])
-            })
-        AddGenre(trends)
+        Array.from(result.results).forEach( el=>{ // resultS a été vu dans postman en ouvrant en json
+            trends.push([el.id,el.title,el.release_date,el.poster_path,el.genre_ids]) // le tableau de tableau 
+            })         // [0]id  [1]titre     [2]date   [3]images      [4]genres    
+            AddGenre(trends) 
+        
     })
-    
+   
   
 }
 
@@ -35,12 +33,13 @@ function AddGenre(arr){//Change les id de genre directement par les noms de genr
             })
         for(el in arr){
             for(e in (arr[el][4])){
-                genre=genrebyid.find(x => x.id == arr[el][4][e])
-                arr[el][4][e]=genre.name
-            }
+                genre=genrebyid.find(x => x.id == arr[el][4][e]) // stock les valeur numerale des genre en les cherchant avec find
+                arr[el][4][e]=genre.name // remplace la valeur numerale trouvé par find par leur nom ecrit "dssfdf"
+            } // boucle qui convertit la valeur du genre qui est un chiffre par son nom de genre correspondant
         }
         createCards(arr)
-        console.log(arr)
+        
+        // console.log(arr)
     })
 }
 
@@ -89,10 +88,11 @@ async function fetchTrailer(id){
 
 
 document.getElementById("action").addEventListener('click',()=>{
-    console.log('ACTION')
+    
     document.getElementById('showmore').style.display='none'
     document.getElementById('showless').style.display='none'
     let cards=document.getElementsByClassName('cds')
+
     for(i=0;i<cards.length;i++){
         par=card[i].querySelectorAll("p")
         if(!par[0].textContent.includes('Action')){
@@ -103,10 +103,11 @@ document.getElementById("action").addEventListener('click',()=>{
     }
 })
 document.getElementById("drama").addEventListener('click',()=>{
-    console.log('DRAMA')
+   
     document.getElementById('showmore').style.display='none'
     document.getElementById('showless').style.display='none'
     let cards=document.getElementsByClassName('cds')
+
     for(i=0;i<cards.length;i++){
         par=card[i].querySelectorAll("p")
         if(!par[0].textContent.includes('Drama')){
@@ -118,7 +119,7 @@ document.getElementById("drama").addEventListener('click',()=>{
 })
 
 document.getElementById("all").addEventListener('click',()=>{
-    // console.log('DRAMA')
+    
     document.getElementById('showmore').style.display='initial'
     document.getElementById('showless').style.display='none'
     let cards=document.getElementsByClassName('cds')

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,9 +29,16 @@
     </div>
 
     <header>
+       <!-- POPUP COOKIE -->
+        <div class="alert text-center cookiealert" role="alert">
+            <b>Aimez vous vos cookies ?</b> &#x1F36A; Nous utilisons vos donnée personelle pour vous garantir une experience unique. coeur sur vous ;) <a href="https://cookiesandyou.com/" target="_blank">En savoir +</a>
+        
+            <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">
+                I agree
+            </button>
+        </div>
+
         <!-- NAVBAR JUMBOTRON CAROUSEL-->
-
-
         <div class="jumbotron text-center">
             <!--debut de la div jumbotron qui englobe le tout.-->
 
@@ -193,70 +201,87 @@
     <section>
         <article class="article">
             <div class="row">
-                <div class="col-md-12">
-                <h2 id="boxFilm">Films au box office</h2>
+                <div class="col-1"></div>
+                <div class="col-md-11">
+                    <h2 id="boxFilm">Films au box office</h2>
                 </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-11" id="selectBox">
+                <div class="col-2"></div>
+                <div class="col-10" id="selectBox">
                     <button id='all' class="boutonBody">All</button>
                     <button id='action' class="boutonBody">Action</button>
                     <button id='drama' class="boutonBody">Drama</button>
-                   
+
                 </div>
                 <div class="col-md-1"></div>
                 <div class=" col-md-2"></div>
-               
-   
+
+
             </div>
-           <!--CARDS FILMS-->
+            <!--CARDS FILMS-->
         </article>
         <template id="tpl">
             <div class="col mb-4 cds">
                 <div id="card" class="card h-100">
-                  <img  class="card-img-top" alt="...">
-                  <div class="card-body" style='position:relative'>
-                    <h5 class="card-title"></h5>
-                    <hr>
-                    <p class="card-text"></p>
-                    <i style='position: absolute;bottom: 0;'></i>
-                  </div>
+                    <img class="card-img-top" alt="...">
+                    <div class="card-body" style='position:relative'>
+                        <h5 class="card-title"></h5>
+                        <hr>
+                        <p class="card-text"></p>
+                        <i style='position: absolute;bottom: 0;'></i>
+                    </div>
                 </div>
-              </div>
+            </div>
         </template>
         <div class="container">
             <div id="target" class="row row-cols-3 row-cols-lg-6">
-               
+
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-6">
+                    <button id='showmore' class="boutonBody">Show More</button>
+                    <button id='showless' class="boutonBody" style='display: none;'>Show Less</button>
+                </div>
             </div>
         </div>
-        <button id='showmore' class="boutonBody">Show More</button>
-        <button id='showless' class="boutonBody" style='display: none;'>Show Less</button>
- 
+
+
+
+
+
+
         <div id="modalvid" class="modalvideo">
             <div class="modal-content">
                 <div class="modal-header">
-                    
+
                     <span id="closevideo">×</span>
                 </div>
                 <div id="video">
-                    <iframe id='iframeboy' width="560" height="315" src="https://www.youtube.com/embed/zyYgDtY2AMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id='iframeboy' width="560" height="315" src="https://www.youtube.com/embed/zyYgDtY2AMY"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-        
+
     </section>
-<hr>
+    <hr>
     <!-- FIN DES FILMS A AFFICHER  -->
 
     <!-- shop movie -->
     <section>
         <article>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-1"></div>
+                <div class="col-md-11">
                     <h2 id="boxFilm">Shop Movie</h2>
                 </div>
             </div>
         </article>
-        
+
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-6">
@@ -285,7 +310,7 @@
                             <img src="https://image.tmdb.org/t/p/original/pjeMs3yqRmFL3giJy4PMXWZTTPa.jpg">
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="col-12 col-lg-6">
                     <iframe id="shopframe" src="" frameborder="0"></iframe>
@@ -298,7 +323,8 @@
     <section>
         <article>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-1"></div>
+                <div class="col-md-11">
                     <h2 id="boxFilm">Contactez nous</h2>
                 </div>
             </div>
@@ -314,7 +340,7 @@
                         <input type="text" class="form-control" id="inputFirstname" placeholder="Prénom">
                     </div>
                 </div>
-    
+
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <input type="text" class="form-control" id="inputEmail" placeholder="Email">
@@ -323,18 +349,19 @@
                         <input type="text" class="form-control" id="inputSubject" placeholder="Sujet">
                     </div>
                 </div>
-    
+
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            <textarea class="form-control" id="textarea" placeholder="Votre message..." rows="5"></textarea>
+                            <textarea class="form-control" id="textarea" placeholder="Votre message..."
+                                rows="5"></textarea>
                         </div>
                     </div>
                 </div>
                 <!-- bouton et debut du modal message-->
                 <button type="button" id="modal-btn" class=" btn btn-danger my-3">Sign in</button>
             </div>
-    
+
             <div id="my-modal" class="modal">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -346,18 +373,11 @@
                     </div>
                 </div>
             </div>
-    
+
         </form>
-    
+
 
     </section>
-    
-
-
-
-    <!--submited-->
-
-    
 
 
     <!-- Footer -->
@@ -517,6 +537,8 @@
         <script src="script.js"></script>
 
         <script src="form.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script> <!-- script cookies -->
 
 
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
