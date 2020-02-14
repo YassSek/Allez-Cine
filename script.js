@@ -158,13 +158,19 @@ document.getElementById("showmore").addEventListener('click',()=>{
             shows+=6
         }else if(shows<cards.length){
             shows+=cards.length-shows
-        } 
+        }
+        if(shows==cards.length){
+            document.getElementById('showmore').style.display='none'
+        }
     }
     )
 
 document.getElementById("showless").addEventListener('click',()=>{
     let cards=document.getElementsByClassName('cds')
         if(shows>6){
+            if(shows==cards.length){
+                document.getElementById('showmore').style.display='initial'
+            }
             if(shows%6==0){
                 for(j=shows;j>=shows-6;j--){
                     cards[j].style.display="none"
@@ -221,4 +227,7 @@ function outsideClick(e) {
 
 document.getElementById('closevideo').addEventListener('click',closeModal);
 window.addEventListener('click', outsideClick);
+
+
+
 
