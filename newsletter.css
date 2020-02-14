@@ -1,0 +1,74 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.body-wrap {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+.masthead {
+    
+background-color:#E98A15;;   
+    background-size: 100% 100%;
+    height: 250px;
+    color:black;
+}
+
+.masthead h1, h2,p {
+
+    color: white;
+}
+
+#white {
+    color: white;
+}
+.firstcontent{
+    background-color: black;
+}
+.firstcontent img {
+    width: 100px;
+    color: white; 
+    padding: 5px;
+
+}
+
+.secondcontent{
+    background-color: black;
+}
+.secondcontent h3 {
+background-color:#E98A15;
+color: white;
+}
+
+.descriptioncinebar  {
+color: white;
+
+}
+
+.content-footer{
+background-color:#E98A15;
+
+}
+
+.content-footer h3, p {
+width: 600px;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+color: black; 
+}
+
+.content-footer li{
+    text-align: center;
+list-style-type: none;
+text-decoration:none;
+
+}
+
+
+
