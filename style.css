@@ -193,10 +193,7 @@ body {
   margin: auto;
   padding: 10px;
 }
-.card-body{
- 
-  
-}
+
 
 #boxFilm {
   margin-left: 20px;
@@ -229,8 +226,6 @@ body {
 }
 
 .shoplist img {
-
-
   width: 100%;
   height: 100%;
 
@@ -247,14 +242,17 @@ body {
   color: white;
   font-weight: bolder;
 }
-
+.modal-login{
+  width: 300px;
+}
 .modal-header {
+  height: fit-content;
   text-align: center;
   background-color: lightslategrey;
 }
 
 .modal-content {
-  width: 250px;
+  width: fit-content;
 
 }
 
@@ -329,8 +327,10 @@ body {
   color: white;
   font-weight: bold;
 
-  margin: 5px;
+  display: inline-block;
+  margin: 2px;
   margin-top: 10px;
+  
 }
 
 /*MODAL message*/
@@ -379,20 +379,6 @@ body {
 }
 
 /* style modale video*/
-.resp-container {
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%;
-}
-
-.resp-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
 
 .modalvideo {
   display: none;
