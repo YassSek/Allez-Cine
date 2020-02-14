@@ -201,7 +201,7 @@ function closeModal() {
 
 // Close If Outside Click
 function outsideClick(e) {
-    if (e.target == modalvid) {
+    if (e.target == modalvid || e.target==colvid1 || e.target==colvid2) {
         document.getElementById('modalvid').style.display = 'none';
     }   
 }
