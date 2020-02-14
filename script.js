@@ -82,6 +82,19 @@ async function fetchTrailer(id){
     .then(result => result)
     .catch(error => console.log('error', error));
     document.getElementById('iframeboy').setAttribute('src',"https://www.youtube.com/embed/"+res.results[0].key)
+    let des= await fetch("http://api.themoviedb.org/3/movie/"+id+"?api_key=5c717347fca7ad27bbc4791dbc618e51", requestOptions)
+    .then(response => response.json())
+    .then(result => result)
+    .catch(error => console.log('error', error));
+    
+    let casts= await fetch("http://api.themoviedb.org/3/movie/"+id+"/credits?api_key=5c717347fca7ad27bbc4791dbc618e51", requestOptions)
+    .then(response => response.json())
+    .then(result => result)
+    .catch(error => console.log('error', error));
+    document.getElementById('descr').textContent=des.overview
+    document.getElementById('real').textContent=' '+casts.crew.find(x => x.job == 'Director').name
+    document.getElementById('actors').textContent=' '+casts.cast[0].name+' ,'+casts.cast[1].name
+    document.getElementById('reldate').textContent=' '+des.release_date
     setTimeout(function(){ document.getElementById('modalvid').style.display='block'}, 500)
 
 }
