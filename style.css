@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /*fleche scroll up*/
@@ -26,7 +26,6 @@ body {
 }
 
 #scrollBtn i {
-
   margin-left: -7px;
   width: fit-content;
   text-align: center;
@@ -64,8 +63,7 @@ body {
 }
 
 .icon-bar a:hover {
-
-  transform: translateX(50%)
+  transform: translateX(50%);
 }
 
 .icon-bar .fab {
@@ -73,13 +71,12 @@ body {
 }
 
 .facebook {
-
-  background: #3B5998;
+  background: #3b5998;
   color: white;
 }
 
 .twitter {
-  background: #55ACEE;
+  background: #55acee;
   color: white;
 }
 
@@ -127,7 +124,6 @@ body {
   height: 30px;
   color: white;
   border-radius: 30px;
-
 }
 
 .search_input::placeholder {
@@ -165,7 +161,6 @@ body {
   width: 90%;
 }
 
-
 .jumbotron {
   width: 100%;
   padding-top: 0px;
@@ -194,7 +189,6 @@ body {
   padding: 10px;
 }
 
-
 #boxFilm {
   margin-left: 20px;
   padding-left: 10px;
@@ -210,16 +204,15 @@ body {
   border-style: hidden;
   background-color: lightgray;
   margin: -2px;
-
 }
 
 .boutonBody:hover {
   color: white;
   background-color: rgb(233, 79, 79);
-  ;
 }
 
 /*shop aparence*/
+
 .shoplist {
   text-align: center;
   display: inline;
@@ -228,21 +221,51 @@ body {
 .shoplist img {
   width: 100%;
   height: 100%;
-
 }
 
 #shopframe {
   background-color: rgba(58, 56, 56, 0.527);
 }
 
+.col-3 {
+  display: inline-block;
+  margin-left: -4px;
+}
+.col-3 img {
+  width: 100%;
+  height: auto;
+}
+body .carousel-indicators li {
+  background-color: red;
+}
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon {
+  background-color: red;
+}
+body .no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+.movieShop {
+  height: 400px;
+}
+.movieShop .row {
+  height: 100%;
+}
+.movieShop .carousel-control-next {
+  width: 40px;
+}
+.movieShop .carousel-control-prev {
+  width: 40px;
+}
+
 /*modal login*/
 #titleMod {
-
   text-align: center;
   color: white;
   font-weight: bolder;
 }
-.modal-login{
+.modal-login {
   width: 300px;
 }
 .modal-header {
@@ -253,7 +276,6 @@ body {
 
 .modal-content {
   width: fit-content;
-
 }
 
 .inputs {
@@ -263,7 +285,6 @@ body {
 
 .modal {
   width: 300px;
-
 }
 
 #login {
@@ -311,7 +332,6 @@ body {
 }
 
 #regis-modal {
-
   display: none;
   z-index: 100;
   position: fixed;
@@ -330,7 +350,6 @@ body {
   display: inline-block;
   margin: 2px;
   margin-top: 10px;
-  
 }
 
 /*MODAL message*/
@@ -394,8 +413,6 @@ body {
   background-color: rgba(0, 0, 0, 0.747);
   box-shadow: lightslategrey 3px;
 }
-
-
 
 .modal-header-video {
   background-color: rgba(128, 128, 128, 0.788);
@@ -461,4 +478,3 @@ a {
   height: 30%;
   margin: 0px;
 }
-
